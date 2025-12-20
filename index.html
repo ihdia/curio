@@ -136,7 +136,27 @@
     ]
   }
   </script>
+
+  <!-- ✅ Added: DashCop-style responsive YouTube embed (publication-video) -->
+  <style>
+    .publication-video {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    .publication-video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- Scroll to Top Button -->
@@ -147,89 +167,103 @@
   <main id="main-content">
     <section class="hero" style="padding-top: 50px">
       <div class="hero-body">
-          <div class="container is-max-desktop">
-              <div class="columns is-centered">
-                  <div class="column has-text-centered">
-                      <div class="content">
-  
-                            <div style="width: 100%; text-align: center;">
-                              <h1 class="title is-1 publication-title">
-                                <span style="display: inline-block; white-space: nowrap;">
-                                  <i>CURIO</i> : Curvature-Aligned and Efficient OCR for <br> Low-Resource Historical Manuscripts
-                                </span>
-                              </h1>
-                            </div>
-                            
-                          <div class="is-size-5 publication-authors">
-                            <span class="author-block"><a href="https://www.linkedin.com/in/sai-madhusudan-gunda-45bab4223/">Sai Madhusudan Gunda</a>,</span>
-                            <span class="author-block"><a href="https://www.linkedin.com/in/tathagata-ghosh-85728192/">Tathagata Ghosh</a>,</span>
-                              <span class="author-block"><a href="https://www.linkedin.com/in/simran-sandral-9213a5374/">Simran Singh Sandral</a>,</span>
-                              <span class="author-block"><a href="https://ravika.github.io">Ravi Kiran Sarvadevabhatla</a></span>
-                          </div>
-                          <div class="is-size-5 publication-authors">
-                              <span class="author-block">
-                                  <a href="https://cvit.iiit.ac.in/" target="_blank">Centre for Visual Information Technology</a>,<br>
-                                  <a href="https://www.iiit.ac.in/" target="_blank">International Institute of Information Technology Hyderabad</a>
-                              </span>
-                              <div style="display: flex; justify-content: space-around">
-                                  <span class="eql-cntrb" style="font-size: 1.4rem!important"><br><small><a href="https://wacv.thecvf.com/">WACV 2026</a></small></span>
-                              </div>
-                          </div>
-  
-                          <div class="column has-text-centered">
-                              <div class="publication-links">
-                                  <!-- Arxiv PDF link -->
-                                  <span class="link-block">
-                                      <a href="./still-building.html"
-                                          class="external-link button is-normal is-rounded is-dark">
-                                          <span class="icon"><i class="fas fa-file-pdf"></i></span>
-                                          <span>Paper</span>
-                                      </a>
-                                  </span>
-                                  <span class="link-block">
-                                      <a href="./still-building.html"
-                                          class="button is-normal is-rounded is-dark">
-                                          <span>🤗</span>
-                                          <span>Dataset</span>
-                                      </a>
-                                  </span>
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <div class="content">
 
-                                  <!-- Code Link. -->
-                                  <span class="link-block">
-                                      <a href="./still-building.html" class="external-link button is-normal is-rounded is-dark">
-                                          <span class="icon"><svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com --></span>
-                                          <span>Code</span>
-                                      </a>
-                                  </span>
+                <div style="width: 100%; text-align: center;">
+                  <h1 class="title is-1 publication-title">
+                    <span style="display: inline-block; white-space: nowrap;">
+                      <i>CURIO</i> : Curvature-Aligned and Efficient OCR for <br> Low-Resource Historical Manuscripts
+                    </span>
+                  </h1>
+                </div>
 
-                                  <span class="link-block">
-                                      <a href="./still-building.html"
-                                          class="button is-normal is-rounded is-dark">
-                                          <span>🤗</span>
-                                          <span>Checkpoints</span>
-                                      </a>
-                                  </span>
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block"><a href="https://www.linkedin.com/in/sai-madhusudan-gunda-45bab4223/">Sai Madhusudan Gunda</a>,</span>
+                  <span class="author-block"><a href="https://www.linkedin.com/in/tathagata-ghosh-85728192/">Tathagata Ghosh</a>,</span>
+                  <span class="author-block"><a href="https://www.linkedin.com/in/simran-sandral-9213a5374/">Simran Singh Sandral</a>,</span>
+                  <span class="author-block"><a href="https://ravika.github.io">Ravi Kiran Sarvadevabhatla</a></span>
+                </div>
 
-                              </div>
-                          </div>
-                      </div>
+                <div class="is-size-5 publication-authors">
+                  <span class="author-block">
+                    <a href="https://cvit.iiit.ac.in/" target="_blank">Centre for Visual Information Technology</a>,<br>
+                    <a href="https://www.iiit.ac.in/" target="_blank">International Institute of Information Technology Hyderabad</a>
+                  </span>
+                  <div style="display: flex; justify-content: space-around">
+                    <span class="eql-cntrb" style="font-size: 1.4rem!important"><br><small><a href="https://wacv.thecvf.com/">WACV 2026</a></small></span>
                   </div>
-              </div>
+                </div>
+
+                <div class="column has-text-centered">
+                  <div class="publication-links">
+                    <!-- Arxiv PDF link -->
+                    <span class="link-block">
+                      <a href="./still-building.html" class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <span class="link-block">
+                      <a href="./still-building.html" class="button is-normal is-rounded is-dark">
+                        <span>🤗</span>
+                        <span>Dataset</span>
+                      </a>
+                    </span>
+
+                    <!-- Code Link. -->
+                    <span class="link-block">
+                      <a href="./still-building.html" class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"></path></svg>
+                        </span>
+                        <span>Code</span>
+                      </a>
+                    </span>
+
+                    <span class="link-block">
+                      <a href="./still-building.html" class="button is-normal is-rounded is-dark">
+                        <span>🤗</span>
+                        <span>Checkpoints</span>
+                      </a>
+                    </span>
+                  </div>
+                </div>
+
+              </div><!-- content -->
+            </div>
           </div>
+        </div>
       </div>
-  </section>
-    <!-- Teaser video-->
-    <section class="hero teaser">
+    </section>
+
+    <!-- ✅ CHANGED: Replace the old <video> + modal YouTube with DashCop-style iframe embed -->
+    <section class="section">
       <div class="container is-max-desktop">
-        <div class="hero-body">
-          <div class="publication-banner">
-            <video poster="static/images/carousel1.jpg" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-              <source src="./static/videos/WACV_video.mp4" type="video/mp4">
-            </video>
+        <div class="columns is-centered has-text-centered mt-5">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Project Video</h2>
+
+            <!-- DashCop-style responsive container -->
+            <div class="publication-video">
+              <iframe
+                src="https://www.youtube.com/embed/xS_1FPTz8qA?rel=0&amp;showinfo=0" 
+                frameborder="0"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Project video">
+              </iframe>
+            </div>
+
+
+            <p class="subtitle has-text-centered" style="margin-top: 1rem;">
+              CURIO straightens curved Sharada lines, trains on curvature-matched synthetic data, and reads centuries-old manuscripts with higher fidelity and lower compute.
+            </p>
           </div>
-          <h2 class="subtitle has-text-centered">
-            CURIO straightens curved Sharada lines, trains on curvature-matched synthetic data, and reads centuries-old manuscripts with higher fidelity and lower compute.
-          </h2>
         </div>
       </div>
     </section>
@@ -332,7 +366,7 @@
       </div>
     </section>
 
-    <!-- Model architecture -->
+    <!-- Results -->
     <section class="hero is-light">
       <div class="hero-body">
         <div class="container is-max-desktop">
@@ -351,28 +385,6 @@
       </div>
     </section>
 
-
-
-    <!--BibTex citation -->
-    <!-- <section class="section" id="BibTeX">
-      <div class="container is-max-desktop content">
-        <div class="bibtex-header">
-          <h2 class="title">BibTeX</h2>
-          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-            <i class="fas fa-copy"></i>
-            <span class="copy-text">Copy</span>
-          </button>
-        </div>
-        <pre id="bibtex-code"><code>@inproceedings{gunda2026curio,
-  title     = {CURIO: Curvature-Aligned and Efficient OCR for Low-Resource Historical Manuscripts},
-  author    = {Gunda, Sai Madhusudan and Ghosh, Tathagata and Sandral, Simran Singh},
-  booktitle = {IEEE Winter Conf. on Applications of Computer Vision (WACV), Applications Track},
-  year      = {2026},
-  url       = {https://curio-ocr.example.com},
-  note      = {Under review}
-}</code></pre>
-      </div>
-    </section> -->
   </main>
 
   <footer class="footer">
@@ -389,5 +401,6 @@
       </div>
     </div>
   </footer>
+
 </body>
 </html>
